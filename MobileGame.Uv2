@@ -1,0 +1,152 @@
+### uVision2 Project, (C) Keil Software
+### Do not modify !
+
+Target (Mobile Game), 0x0004 // Tools: 'ARM-ADS'
+
+Group (uCosII)
+Group (Configure)
+Group (StartUp)
+Group (Global)
+Group (GUI)
+Group (Source)
+Group (Drives)
+Group (uCos_Arm)
+
+File 1,1,<.\UCOS_II\OS_TIME.C><OS_TIME.C>
+File 1,1,<.\UCOS_II\OS_CORE.C><OS_CORE.C>
+File 1,1,<.\UCOS_II\OS_TASK.C><OS_TASK.C>
+File 1,5,<.\UCOS_II\uCOS_II.H><uCOS_II.H>
+File 2,5,<.\Configure\OS_CFG.H><OS_CFG.H>
+File 2,5,<.\Configure\Configure.h><Configure.h>
+File 2,5,<.\Configure\INCLUDES.H><INCLUDES.H>
+File 3,2,<.\StartUp\Vectors.s><Vectors.s>
+File 3,2,<.\StartUp\Init.s><Init.s>
+File 3,1,<.\StartUp\target.c><target.c>
+File 3,5,<.\StartUp\target.h><target.h>
+File 4,1,<.\Global\Data.c><Data.c>
+File 4,1,<.\Global\TwinklePic.c><TwinklePic.c>
+File 4,1,<.\Global\Letter.c><Letter.c>
+File 4,1,<.\Global\Map.c><Map.c>
+File 4,1,<.\Global\MiniMap.c><MiniMap.c>
+File 4,1,<.\Global\StaticPic.c><StaticPic.c>
+File 4,5,<.\Global\TwinklePic.h><TwinklePic.h>
+File 4,5,<.\Global\Data.h><Data.h>
+File 4,5,<.\Global\Letter.h><Letter.h>
+File 4,5,<.\Global\Map.h><Map.h>
+File 4,5,<.\Global\MiniMap.h><MiniMap.h>
+File 4,5,<.\Global\number.h><number.h>
+File 4,5,<.\Global\StaticPic.h><StaticPic.h>
+File 4,1,<.\Global\number.c><number.c>
+File 4,5,<.\Global\bitmap.h><bitmap.h>
+File 4,1,<.\Global\bitmap.c><bitmap.c>
+File 5,5,<.\GUI\Graphic.h><Graphic.h>
+File 5,1,<.\GUI\Graphic.c><Graphic.c>
+File 6,1,<.\Source\main.c><main.c>
+File 6,1,<.\Source\uartprint.c><uartprint.c>
+File 6,1,<.\Source\environment.c><environment.c>
+File 6,1,<.\Source\game_control.c><game_control.c>
+File 6,1,<.\Source\key_press.c><key_press.c>
+File 6,5,<.\Source\key_press.h><key_press.h>
+File 6,5,<.\Source\environment.h><environment.h>
+File 6,5,<.\Source\game_control.h><game_control.h>
+File 6,5,<.\Source\print.h><print.h>
+File 7,5,<.\Drives\LCD12864.h><LCD12864.h>
+File 7,1,<.\Drives\LCD1602.c><LCD1602.c>
+File 7,5,<.\Drives\LCD1602.h><LCD1602.h>
+File 7,1,<.\Drives\LCD12864.c><LCD12864.c>
+File 8,5,<.\UCOS_II\ARM\LPC2124.h><LPC2124.h>
+File 8,5,<.\UCOS_II\ARM\OS_CPU.H><OS_CPU.H>
+File 8,2,<.\UCOS_II\ARM\Os_cpu_a.s><Os_cpu_a.s>
+File 8,1,<.\UCOS_II\ARM\Os_cpu_c.c><Os_cpu_c.c>
+
+
+Options 1,0,0  // Target 'Mobile Game'
+ Device (LPC2124)
+ Vendor (NXP (founded by Philips))
+ Cpu (IRAM(0x40000000-0x40003FFF) IROM(0-0x3FFFF) CLOCK(60000000) CPUTYPE(ARM7TDMI))
+ FlashUt (LPC210x_ISP.EXE ("#H" ^X $D COM1: 9600 1))
+ StupF ("STARTUP\Philips\Startup.s" ("Philips LPC2100 Startup Code"))
+ FlashDR (UL2ARM(-U40296420 -O7 -C0 -FO7 -FD40000000 -FC800 -FN1 -FF0LPC_IAP_256 -FS00 -FL03E000))
+ DevID (3647)
+ Rgf (LPC21xx.H)
+ Mem ()
+ C ()
+ A ()
+ RL ()
+ OH ()
+ DBC_IFX ()
+ DBC_CMS ()
+ DBC_AMS ()
+ DBC_LMS ()
+ UseEnv=0
+ EnvBin ()
+ EnvInc ()
+ EnvLib ()
+ EnvReg (ÿPhilips\)
+ OrgReg (ÿPhilips\)
+ TgStat=16
+ OutDir (.\output\)
+ OutName (MobileGame)
+ GenApp=1
+ GenLib=0
+ GenHex=1
+ Debug=1
+ Browse=1
+ LstDir (.\)
+ HexSel=1
+ MG32K=0
+ TGMORE=0
+ RunUsr 0 0 <>
+ RunUsr 1 0 <>
+ BrunUsr 0 0 <>
+ BrunUsr 1 0 <>
+ CrunUsr 0 0 <>
+ CrunUsr 1 0 <>
+ SVCSID <>
+ GLFLAGS=1790
+ ADSFLGA { 243,31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ACPUTYP (ARM7TDMI)
+ RVDEV ()
+ ADSTFLGA { 0,12,0,2,99,0,0,66,0,0,0,0,0,0,0,0,0,0,0,0 }
+ OCMADSOCM { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ OCMADSIRAM { 0,0,0,0,64,0,64,0,0 }
+ OCMADSIROM { 1,0,0,0,0,0,0,4,0 }
+ OCMADSXRAM { 0,0,0,0,0,0,0,0,0 }
+ OCR_RVCT { 1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,64,0,0,64,0,64,0,0,0,0,0,0,0,0,0,0,0 }
+ RV_STAVEC ()
+ ADSCCFLG { 5,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSCMISC ()
+ ADSCDEFN ()
+ ADSCUDEF ()
+ ADSCINCD (..\MobileGame;.\Configure;.\Global;.\Drives;.\GUI;.\output;.\Source;.\StartUp;.\UCOS_II;.\UCOS_II\ARM)
+ ADSASFLG { 1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSAMISC ()
+ ADSADEFN ()
+ ADSAUDEF ()
+ ADSAINCD ()
+ PropFld { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ IncBld=1
+ AlwaysBuild=0
+ GenAsm=0
+ AsmAsm=0
+ PublicsOnly=0
+ StopCode=3
+ CustArgs ()
+ LibMods ()
+ ADSLDFG { 17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSLDTA (0x00000000)
+ ADSLDDA (0x40000000)
+ ADSLDSC ()
+ ADSLDIB ()
+ ADSLDIC ()
+ ADSLDMC ()
+ ADSLDIF ()
+ ADSLDDW ()
+  OPTDL (SARM.DLL)(-cLPC2100)(DARMP.DLL)(-pLPC21xx)(SARM.DLL)()(TARMP.DLL)(-pLPC21xx)
+  OPTDBG 48125,0,()()()()()()()()()() (BIN\UL2ARM.DLL)()()()
+ FLASH1 { 2,0,0,0,0,0,0,0,255,255,255,255,0,0,0,0,0,0,0,0 }
+ FLASH2 ()
+ FLASH3 ("LPC210x_ISP.EXE" ("#H" ^X $D COM1: 9600 1))
+ FLASH4 ()
+EndOpt
+

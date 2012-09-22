@@ -1,0 +1,4 @@
+".\output\os_time.o" ".\output\os_core.o" ".\output\os_task.o" ".\output\vectors.o" ".\output\init.o" ".\output\target.o" ".\output\data.o" ".\output\twinklepic.o" ".\output\letter.o" ".\output\map.o" ".\output\minimap.o" ".\output\staticpic.o" ".\output\number.o" ".\output\bitmap.o" ".\output\graphic.o" ".\output\main.o" ".\output\uartprint.o" ".\output\environment.o" ".\output\game_control.o" ".\output\key_press.o" ".\output\lcd1602.o" ".\output\lcd12864.o" ".\output\os_cpu_a.o" ".\output\os_cpu_c.o" --device DARMP --strict --scatter ".\output\MobileGame.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\MobileGame.map" -o ".\output\MobileGame.axf"

@@ -1,0 +1,1 @@
+-c --device DARMP -g -O0 --apcs=interwork -I..\MobileGame -I.\Configure -I.\Global -I.\Drives -I.\GUI -I.\output -I.\Source -I.\StartUp -I.\UCOS_II -I.\UCOS_II\ARM -I "C:\Keil\ARM\INC\Philips" -o ".\output\os_cpu_c.o" --omf_browse ".\output\os_cpu_c.crf" --depend ".\output\os_cpu_c.d" "UCOS_II\ARM\Os_cpu_c.c"

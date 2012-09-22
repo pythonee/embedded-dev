@@ -1,0 +1,45 @@
+*** Creating Trace Output File '.\output\MobileGame.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\output\os_time.o"'
+### List of Objects: adding '".\output\os_core.o"'
+### List of Objects: adding '".\output\os_task.o"'
+### List of Objects: adding '".\output\vectors.o"'
+### List of Objects: adding '".\output\init.o"'
+### List of Objects: adding '".\output\target.o"'
+### List of Objects: adding '".\output\data.o"'
+### List of Objects: adding '".\output\twinklepic.o"'
+### List of Objects: adding '".\output\letter.o"'
+### List of Objects: adding '".\output\map.o"'
+### List of Objects: adding '".\output\minimap.o"'
+### List of Objects: adding '".\output\staticpic.o"'
+### List of Objects: adding '".\output\number.o"'
+### List of Objects: adding '".\output\bitmap.o"'
+### List of Objects: adding '".\output\graphic.o"'
+### List of Objects: adding '".\output\main.o"'
+### List of Objects: adding '".\output\uartprint.o"'
+### List of Objects: adding '".\output\environment.o"'
+### List of Objects: adding '".\output\game_control.o"'
+### List of Objects: adding '".\output\key_press.o"'
+### List of Objects: adding '".\output\lcd1602.o"'
+### List of Objects: adding '".\output\lcd12864.o"'
+### List of Objects: adding '".\output\os_cpu_a.o"'
+### List of Objects: adding '".\output\os_cpu_c.o"'
+### ADS-LD Command completed:
+".\output\os_time.o" ".\output\os_core.o" ".\output\os_task.o" ".\output\vectors.o" ".\output\init.o" ".\output\target.o" ".\output\data.o" ".\output\twinklepic.o" ".\output\letter.o" ".\output\map.o" ".\output\minimap.o" ".\output\staticpic.o" ".\output\number.o" ".\output\bitmap.o" ".\output\graphic.o" ".\output\main.o" ".\output\uartprint.o" ".\output\environment.o" ".\output\game_control.o" ".\output\key_press.o" ".\output\lcd1602.o" ".\output\lcd12864.o" ".\output\os_cpu_a.o" ".\output\os_cpu_c.o" --device DARMP --strict --scatter ".\output\MobileGame.sct" 
+
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+
+--info sizes --info totals --info unused --info veneers 
+
+ --list ".\MobileGame.map" -o ".\output\MobileGame.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\output\MobileGame.axf'
+### ADS-LD Command File: '.\output\MobileGame.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\output\MobileGame.lnp', Handle=0x00000288
+### Writing '.lnp' file
+### ADS-LD Command file '.\output\MobileGame.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

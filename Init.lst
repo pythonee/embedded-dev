@@ -1,0 +1,225 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ;/****************************************Copyright (c)*
+                       *************************************************
+    2 00000000         ;*******************************************************
+                       *************************************************/
+    3 00000000         
+    4 00000000         ;引入的外部标号在这声明
+    5 00000000                 IMPORT           __main      ;C语言主程序入口 
+    6 00000000                 IMPORT           InitStack   ;初始化堆栈
+    7 00000000                 IMPORT           TargetResetInit 
+                                                            ;目标板基本初始化
+    8 00000000         
+    9 00000000         ;给外部使用的标号在这声明
+   10 00000000                 EXPORT           Reset
+   11 00000000                 EXPORT           __rt_div0
+   12 00000000                 EXPORT           __user_initial_stackheap
+   13 00000000         
+   14 00000000         ;段声明
+   15 00000000                 CODE32
+   16 00000000                 AREA             Init,CODE,READONLY
+   17 00000000         
+   18 00000000         ;/******************************************************
+                       ***************************************************
+   19 00000000         ;** 函数名称: Reset
+   20 00000000         ;** 功能描述: 复位入口
+   21 00000000         ;*******************************************************
+                       *************************************************/
+   22 00000000         Reset
+   23 00000000 EBFFFFFE        BL               InitStack   ;初始化堆栈
+   24 00000004 EBFFFFFE        BL               TargetResetInit 
+                                                            ;目标板基本初始化
+   25 00000008         ;跳转到c语言入口
+   26 00000008 EAFFFFFE        B                __main
+   27 0000000C         
+   28 0000000C         
+   29 0000000C         ;/******************************************************
+                       ***************************************************
+   30 0000000C         ;** 函数名称: __user_initial_stackheap 
+   31 0000000C         ;** 功能描述: 库函数初始化堆和栈，不能删除
+   32 0000000C         ;*******************************************************
+                       *************************************************/
+   33 0000000C         __user_initial_stackheap
+   34 0000000C E59F0004        LDR              r0,=bottom_of_heap
+   35 00000010         ;MOV   pc,lr
+   36 00000010 E12FFF1E        BX               lr
+   37 00000014         
+   38 00000014         
+   39 00000014         ;/******************************************************
+                       ***************************************************
+   40 00000014         ;** 函数名称: __rt_div0
+   41 00000014         ;** 功能描述: 整数除法除数为0错误处理函数，替代原始的__r
+                       t_div0减少目标代码大小
+   42 00000014         ;*******************************************************
+                       *************************************************/
+   43 00000014         __rt_div0
+   44 00000014         
+   45 00000014 EAFFFFFE        B                __rt_div0
+   46 00000018         
+   47 00000018         ;/* 分配堆空间 */
+   48 00000018 00000000        AREA             Myheap, DATA, NOINIT, ALIGN=2
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   49 00000000         bottom_of_heap
+                               SPACE            256         ;库函数的堆空间
+   50 00000100         
+   51 00000100                 END
+Command Line: --debug --xref --device=DARMP --apcs=interwork -o.\output\Init.o 
+-IC:\Keil\ARM\INC\Philips --list=.\Init.lst StartUp\Init.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Init 00000000
+
+Symbol: Init
+   Definitions
+      At line 16 in file StartUp\Init.s
+   Uses
+      None
+Comment: Init unused
+Reset 00000000
+
+Symbol: Reset
+   Definitions
+      At line 22 in file StartUp\Init.s
+   Uses
+      At line 10 in file StartUp\Init.s
+Comment: Reset used once
+__rt_div0 00000014
+
+Symbol: __rt_div0
+   Definitions
+      At line 43 in file StartUp\Init.s
+   Uses
+      At line 11 in file StartUp\Init.s
+      At line 45 in file StartUp\Init.s
+
+__user_initial_stackheap 0000000C
+
+Symbol: __user_initial_stackheap
+   Definitions
+      At line 33 in file StartUp\Init.s
+   Uses
+      At line 12 in file StartUp\Init.s
+Comment: __user_initial_stackheap used once
+4 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Myheap 00000000
+
+Symbol: Myheap
+   Definitions
+      At line 48 in file StartUp\Init.s
+   Uses
+      None
+Comment: Myheap unused
+bottom_of_heap 00000000
+
+Symbol: bottom_of_heap
+   Definitions
+      At line 49 in file StartUp\Init.s
+   Uses
+      At line 34 in file StartUp\Init.s
+Comment: bottom_of_heap used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.debug_info$$$Init 00000000
+
+Symbol: .debug_info$$$Init
+   Definitions
+      None
+   Uses
+      None
+Warning: .debug_info$$$Init undefinedComment: .debug_info$$$Init unused
+1 symbol
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.debug_line$$$Init 00000000
+
+Symbol: .debug_line$$$Init
+   Definitions
+      None
+   Uses
+      None
+Warning: .debug_line$$$Init undefinedComment: .debug_line$$$Init unused
+1 symbol
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.debug_abbrev 00000000
+
+Symbol: .debug_abbrev
+   Definitions
+      None
+   Uses
+      None
+Warning: .debug_abbrev undefinedComment: .debug_abbrev unused
+__ARM_asm.debug_abbrev 00000000
+
+Symbol: __ARM_asm.debug_abbrev
+   Definitions
+      None
+   Uses
+      None
+Warning: __ARM_asm.debug_abbrev undefinedComment: __ARM_asm.debug_abbrev unused
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+InitStack 00000000
+
+Symbol: InitStack
+   Definitions
+      At line 6 in file StartUp\Init.s
+   Uses
+      At line 23 in file StartUp\Init.s
+Comment: InitStack used once
+TargetResetInit 00000000
+
+Symbol: TargetResetInit
+   Definitions
+      At line 7 in file StartUp\Init.s
+   Uses
+      At line 24 in file StartUp\Init.s
+Comment: TargetResetInit used once
+__main 00000000
+
+Symbol: __main
+   Definitions
+      At line 5 in file StartUp\Init.s
+   Uses
+      At line 26 in file StartUp\Init.s
+Comment: __main used once
+3 symbols
+334 symbols in table

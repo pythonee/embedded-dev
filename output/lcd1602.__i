@@ -1,0 +1,1 @@
+-c --device DARMP -g -O0 --apcs=interwork -I..\MobileGame -I.\Configure -I.\Global -I.\Drives -I.\GUI -I.\output -I.\Source -I.\StartUp -I.\UCOS_II -I.\UCOS_II\ARM -I "C:\Keil\ARM\INC\Philips" -o ".\output\lcd1602.o" --omf_browse ".\output\lcd1602.crf" --depend ".\output\lcd1602.d" "Drives\LCD1602.c"

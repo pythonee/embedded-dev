@@ -1,0 +1,1367 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<title>Static Call Graph - [.\output\MobileGame.axf]</title></head>
+<body><HR>
+<H1>Static Call Graph for image .\output\MobileGame.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, RVCT3.1 [Build 919]: Last Updated: Sat Jul 18 14:24:46 2009
+<BR><P>
+<H3>Maximum Stack Usage =        152 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+Call chain for Maximum Stack Depth:</H3>
+Key_Main &rArr; Key_ProcessKey &rArr; Environment_KeyPress &rArr; Environment_UpdateHeroboard &rArr; GUI_DisplayHero &rArr; GUI_Mix &rArr; LCD12864Driver_DisplayByte
+<P>
+<H3>
+Functions with no stack information
+</H3><UL>
+ <LI><a href="#[cff970]">Vectors</a>
+ <LI><a href="#[cff928]">IRQ_Handler</a>
+ <LI><a href="#[cff8e0]">Timer0_Handler</a>
+ <LI><a href="#[cff898]">InitStack</a>
+ <LI><a href="#[cff778]">Reset</a>
+ <LI><a href="#[cff380]">__user_initial_stackheap</a>
+ <LI><a href="#[cff338]">__rt_div0</a>
+ <LI><a href="#[cff730]">SoftwareInterrupt</a>
+ <LI><a href="#[cff7c0]">OSIntCtxSw</a>
+ <LI><a href="#[116e3b8]">__OSStartHighRdy</a>
+ <LI><a href="#[cffad8]">Undefined</a>
+ <LI><a href="#[cffa90]">PrefetchAbort</a>
+ <LI><a href="#[cffa48]">DataAbort</a>
+ <LI><a href="#[cffa00]">FIQ_Handler</a>
+</UL>
+</UL>
+<P>
+<H3>
+Mutually Recursive functions
+</H3> <LI><a href="#[cffad8]">Undefined</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[cffad8]">Undefined</a><BR>
+ <LI><a href="#[cffa90]">PrefetchAbort</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[cffa90]">PrefetchAbort</a><BR>
+ <LI><a href="#[cffa48]">DataAbort</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[cffa48]">DataAbort</a><BR>
+</UL>
+<P>
+<H3>
+Function Pointers
+</H3><UL>
+ <LI><a href="#[cff778]">Reset</a>
+ <LI><a href="#[cffad8]">Undefined</a>
+ <LI><a href="#[cff730]">SoftwareInterrupt</a>
+ <LI><a href="#[cffa90]">PrefetchAbort</a>
+ <LI><a href="#[cffa48]">DataAbort</a>
+ <LI><a href="#[cff928]">IRQ_Handler</a>
+ <LI><a href="#[cffa00]">FIQ_Handler</a>
+ <LI><a href="#[cff7c0]">OSIntCtxSw</a>
+ <LI><a href="#[1165910]">__ARM_get_argv</a>
+ <LI><a href="#[cff928]">IRQ_Handler</a>
+ <LI><a href="#[cff8e0]">Timer0_Handler</a>
+ <LI><a href="#[115f148]">Key_Main</a>
+ <LI><a href="#[1156608]">GameControl_Move</a>
+ <LI><a href="#[115f1d8]">main</a>
+ <LI><a href="#[11668e8]">__I_use_semihosting</a>
+ <LI><a href="#[cff7c0]">OSIntCtxSw</a>
+ <LI><a href="#[116e3b8]">__OSStartHighRdy</a>
+</UL>
+<P>
+<H3>
+Global Symbols
+</H3>
+<P><STRONG><a name="[cff970]"></a>Vectors</STRONG> (ARM, 0 bytes, Stack size unknown bytes, vectors.o(RESET), UNUSED, KEPT)
+
+<P><STRONG><a name="[cff928]"></a>IRQ_Handler</STRONG> (ARM, 0 bytes, Stack size unknown bytes, vectors.o(RESET))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
+<LI>Call Chain = IRQ_Handler &rArr; OSIntExit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[cff808]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ_Exception
+<LI><a href="#[d01350]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
+</UL>
+<BR>[Address Reference Count : 2]<UL><LI> target.o(.text)
+<LI> vectors.o(RESET)
+</UL>
+<P><STRONG><a name="[cff8e0]"></a>Timer0_Handler</STRONG> (ARM, 0 bytes, Stack size unknown bytes, vectors.o(RESET))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16 + Unknown Stack Size
+<LI>Call Chain = Timer0_Handler &rArr; Timer0 &rArr; OSTimeTick
+</UL>
+<BR>[Calls]<UL><LI><a href="#[cff6e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer0
+<LI><a href="#[d01350]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> target.o(.text)
+</UL>
+<P><STRONG><a name="[cff898]"></a>InitStack</STRONG> (ARM, 0 bytes, Stack size unknown bytes, vectors.o(RESET))
+<BR><BR>[Called By]<UL><LI><a href="#[cff778]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset
+</UL>
+
+<P><STRONG><a name="[1168cb8]"></a>__main</STRONG> (ARM, 8 bytes, Stack size 0 bytes, __main.o(!!!main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64 + Unknown Stack Size
+<LI>Call Chain = __main &rArr; __rt_entry &rArr; __rt_lib_init &rArr; _fp_init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1162d28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+<LI><a href="#[11689f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
+</UL>
+<BR>[Called By]<UL><LI><a href="#[cff778]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset
+</UL>
+
+<P><STRONG><a name="[1162d28]"></a>__scatterload</STRONG> (ARM, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter))
+<BR><BR>[Called By]<UL><LI><a href="#[1168cb8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
+</UL>
+
+<P><STRONG><a name="[1162ce0]"></a>__scatterload_rt2</STRONG> (ARM, 52 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[11689f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
+</UL>
+
+<P><STRONG><a name="[1162c98]"></a>__scatterload_null</STRONG> (ARM, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+
+<P><STRONG><a name="[1162f20]"></a>__decompress</STRONG> (ARM, 68 bytes, Stack size unknown bytes, __dczerorl.o(!!dczerorl), UNUSED)
+
+<P><STRONG><a name="[1162ed8]"></a>__decompress0</STRONG> (ARM, 0 bytes, Stack size unknown bytes, __dczerorl.o(!!dczerorl), UNUSED)
+
+<P><STRONG><a name="[11f5c80]"></a>__scatterload_zeroinit</STRONG> (ARM, 44 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
+
+<P><STRONG><a name="[1167838]"></a>__ARM_argv_veneer</STRONG> (ARM, 16 bytes, Stack size 0 bytes, lib_init.o(.emb_text))
+<BR><BR>[Called By]<UL><LI><a href="#[11677a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init (via Veneer)
+</UL>
+
+<P><STRONG><a name="[d02dd0]"></a>OSTimeDly</STRONG> (ARM, 140 bytes, Stack size 8 bytes, os_time.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = OSTimeDly &rArr; OS_Sched
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d02b00]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d02d88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDlyHMSM
+</UL>
+
+<P><STRONG><a name="[d02d88]"></a>OSTimeDlyHMSM</STRONG> (ARM, 232 bytes, Stack size 32 bytes, os_time.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48 + Unknown Stack Size
+<LI>Call Chain = OSTimeDlyHMSM &rArr; OSTimeDly &rArr; OS_Sched
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d02dd0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
+<LI><a href="#[1169920]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1156608]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_Move
+<LI><a href="#[11566e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_CreateBean
+<LI><a href="#[1156848]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_DisplayTime
+<LI><a href="#[115f148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_Main
+<LI><a href="#[11622c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_TwinklePicTask
+</UL>
+
+<P><STRONG><a name="[d02d40]"></a>OSTimeDlyResume</STRONG> (ARM, 184 bytes, Stack size 16 bytes, os_time.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[d02b00]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+</UL>
+
+<P><STRONG><a name="[d02cf8]"></a>OSTimeGet</STRONG> (ARM, 32 bytes, Stack size 8 bytes, os_time.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OSTimeGet
+</UL>
+<BR>[Called By]<UL><LI><a href="#[115f220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
+</UL>
+
+<P><STRONG><a name="[d02cb0]"></a>OSTimeSet</STRONG> (ARM, 32 bytes, Stack size 8 bytes, os_time.o(.text), UNUSED)
+
+<P><STRONG><a name="[d01428]"></a>OS_TaskIdle</STRONG> (ARM, 48 bytes, Stack size 8 bytes, os_core.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[d00e40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskIdleHook
+</UL>
+
+<P><STRONG><a name="[d013e0]"></a>OSInit</STRONG> (ARM, 40 bytes, Stack size 8 bytes, os_core.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = OSInit &rArr; OS_InitTaskIdle &rArr; OSTaskCreateExt &rArr; OS_TCBInit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d00fa8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInitHookEnd
+<LI><a href="#[d00ff0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInitHookBegin
+<LI><a href="#[d01ed8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_InitMisc
+<LI><a href="#[d01f20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_InitRdyList
+<LI><a href="#[d01f68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_InitTCBList
+<LI><a href="#[d01fb0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_InitEventList
+<LI><a href="#[d01ff8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_InitTaskIdle
+</UL>
+<BR>[Called By]<UL><LI><a href="#[115f220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
+</UL>
+
+<P><STRONG><a name="[d01398]"></a>OSIntEnter</STRONG> (ARM, 56 bytes, Stack size 0 bytes, os_core.o(.text), UNUSED)
+
+<P><STRONG><a name="[d01350]"></a>OSIntExit</STRONG> (ARM, 252 bytes, Stack size 8 bytes, os_core.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OSIntExit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[cff8e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer0_Handler
+<LI><a href="#[cff928]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ_Handler
+</UL>
+
+<P><STRONG><a name="[d01308]"></a>OSSchedLock</STRONG> (ARM, 72 bytes, Stack size 8 bytes, os_core.o(.text), UNUSED)
+
+<P><STRONG><a name="[d02b00]"></a>OS_Sched</STRONG> (ARM, 168 bytes, Stack size 8 bytes, os_core.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OS_Sched
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d00028]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSuspend
+<LI><a href="#[d000b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskResume
+<LI><a href="#[d00148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+<LI><a href="#[d00190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
+<LI><a href="#[d001d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskChangePrio
+<LI><a href="#[d00ed0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreateExt
+<LI><a href="#[d012c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedUnlock
+<LI><a href="#[d02d40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDlyResume
+<LI><a href="#[d02dd0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
+</UL>
+
+<P><STRONG><a name="[d012c0]"></a>OSSchedUnlock</STRONG> (ARM, 124 bytes, Stack size 8 bytes, os_core.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[d02b00]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+</UL>
+
+<P><STRONG><a name="[d01278]"></a>OSStart</STRONG> (ARM, 132 bytes, Stack size 16 bytes, os_core.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = OSStart &rArr; OSStartHighRdy
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d00f60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStartHighRdy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[115f1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[d01230]"></a>OSTimeTick</STRONG> (ARM, 212 bytes, Stack size 8 bytes, os_core.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OSTimeTick
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d00df8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeTickHook
+</UL>
+<BR>[Called By]<UL><LI><a href="#[cff6e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer0
+</UL>
+
+<P><STRONG><a name="[d011e8]"></a>OSVersion</STRONG> (ARM, 8 bytes, Stack size 0 bytes, os_core.o(.text), UNUSED)
+
+<P><STRONG><a name="[d011a0]"></a>OS_Dummy</STRONG> (ARM, 4 bytes, Stack size 0 bytes, os_core.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[d00148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+</UL>
+
+<P><STRONG><a name="[d01158]"></a>OS_EventTaskRdy</STRONG> (ARM, 188 bytes, Stack size 24 bytes, os_core.o(.text), UNUSED)
+
+<P><STRONG><a name="[d01110]"></a>OS_EventTaskWait</STRONG> (ARM, 188 bytes, Stack size 0 bytes, os_core.o(.text), UNUSED)
+
+<P><STRONG><a name="[d010c8]"></a>OS_EventTO</STRONG> (ARM, 116 bytes, Stack size 0 bytes, os_core.o(.text), UNUSED)
+
+<P><STRONG><a name="[d01080]"></a>OS_EventWaitListInit</STRONG> (ARM, 48 bytes, Stack size 0 bytes, os_core.o(.text), UNUSED)
+
+<P><STRONG><a name="[d01038]"></a>OS_TCBInit</STRONG> (ARM, 336 bytes, Stack size 40 bytes, os_core.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = OS_TCBInit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d00e88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreateHook
+<LI><a href="#[d00f18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTCBInitHook
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d00190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
+<LI><a href="#[d00ed0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreateExt
+</UL>
+
+<P><STRONG><a name="[d001d8]"></a>OSTaskChangePrio</STRONG> (ARM, 460 bytes, Stack size 40 bytes, os_task.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[d02b00]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+</UL>
+
+<P><STRONG><a name="[d00190]"></a>OSTaskCreate</STRONG> (ARM, 236 bytes, Stack size 40 bytes, os_task.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = OSTaskCreate &rArr; OS_TCBInit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[cfff50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskStkInit
+<LI><a href="#[d01038]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TCBInit
+<LI><a href="#[d02b00]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11565c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_InitialSnake
+<LI><a href="#[11567b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_GameEnd
+<LI><a href="#[115f1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[1161e88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_KeyPress
+<LI><a href="#[1162278]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_TwinklePic
+</UL>
+
+<P><STRONG><a name="[d00ed0]"></a>OSTaskCreateExt</STRONG> (ARM, 288 bytes, Stack size 56 bytes, os_task.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = OSTaskCreateExt &rArr; OS_TCBInit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[cfff50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskStkInit
+<LI><a href="#[d01038]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TCBInit
+<LI><a href="#[d02b00]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+<LI><a href="#[1169e10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d01ff8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_InitTaskIdle
+</UL>
+
+<P><STRONG><a name="[d00148]"></a>OSTaskDel</STRONG> (ARM, 492 bytes, Stack size 24 bytes, os_task.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[cfff98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDelHook
+<LI><a href="#[d011a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Dummy
+<LI><a href="#[d02b00]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1156800]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_GameEndTask
+<LI><a href="#[115f268]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;startTimer
+<LI><a href="#[1161ed0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DelTwinkTask
+</UL>
+
+<P><STRONG><a name="[d00100]"></a>OSTaskDelReq</STRONG> (ARM, 140 bytes, Stack size 24 bytes, os_task.o(.text), UNUSED)
+
+<P><STRONG><a name="[d000b8]"></a>OSTaskResume</STRONG> (ARM, 192 bytes, Stack size 16 bytes, os_task.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = OSTaskResume &rArr; OS_Sched
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d02b00]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1156530]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_ResumeSnake
+</UL>
+
+<P><STRONG><a name="[d00070]"></a>OSTaskStkChk</STRONG> (ARM, 192 bytes, Stack size 32 bytes, os_task.o(.text), UNUSED)
+
+<P><STRONG><a name="[d00028]"></a>OSTaskSuspend</STRONG> (ARM, 240 bytes, Stack size 16 bytes, os_task.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = OSTaskSuspend &rArr; OS_Sched
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d02b00]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11564e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_SuspendSnake
+</UL>
+
+<P><STRONG><a name="[cfffe0]"></a>OSTaskQuery</STRONG> (ARM, 120 bytes, Stack size 16 bytes, os_task.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[116a0d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+</UL>
+
+<P><STRONG><a name="[cff808]"></a>IRQ_Exception</STRONG> (ARM, 8 bytes, Stack size 0 bytes, target.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[cff928]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ_Handler
+</UL>
+
+<P><STRONG><a name="[cff850]"></a>FIQ_Exception</STRONG> (ARM, 8 bytes, Stack size 0 bytes, target.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[cffa00]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIQ_Handler
+</UL>
+
+<P><STRONG><a name="[cff6e8]"></a>Timer0</STRONG> (ARM, 56 bytes, Stack size 8 bytes, target.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Timer0 &rArr; OSTimeTick
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d01230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeTick
+</UL>
+<BR>[Called By]<UL><LI><a href="#[cff8e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer0_Handler
+</UL>
+
+<P><STRONG><a name="[cfc650]"></a>TargetInit</STRONG> (ARM, 100 bytes, Stack size 8 bytes, target.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TargetInit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[115f220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
+</UL>
+
+<P><STRONG><a name="[cfc608]"></a>InitialiseUART1</STRONG> (ARM, 96 bytes, Stack size 16 bytes, target.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16 + Unknown Stack Size
+<LI>Call Chain = InitialiseUART1
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1169920]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[cff2f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TargetResetInit
+</UL>
+
+<P><STRONG><a name="[cff2f0]"></a>TargetResetInit</STRONG> (ARM, 232 bytes, Stack size 8 bytes, target.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24 + Unknown Stack Size
+<LI>Call Chain = TargetResetInit &rArr; InitialiseUART1
+</UL>
+<BR>[Calls]<UL><LI><a href="#[cfc608]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitialiseUART1
+</UL>
+<BR>[Called By]<UL><LI><a href="#[cff778]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset
+</UL>
+
+<P><STRONG><a name="[1162308]"></a>GUI_Mix</STRONG> (ARM, 352 bytes, Stack size 40 bytes, graphic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = GUI_Mix &rArr; LCD12864Driver_DisplayByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1161e40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD12864Driver_DisplayByte
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1161ed0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DelTwinkTask
+<LI><a href="#[1161f18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayPause
+<LI><a href="#[1161f60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayHero
+<LI><a href="#[1161fa8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayHeroName
+<LI><a href="#[1161ff0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayMap
+<LI><a href="#[1162038]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayMiniMap
+<LI><a href="#[11622c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_TwinklePicTask
+</UL>
+
+<P><STRONG><a name="[11622c0]"></a>GUI_TwinklePicTask</STRONG> (ARM, 112 bytes, Stack size 16 bytes, graphic.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[d02d88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDlyHMSM
+<LI><a href="#[1162308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Mix
+</UL>
+
+<P><STRONG><a name="[1162278]"></a>GUI_TwinklePic</STRONG> (ARM, 32 bytes, Stack size 8 bytes, graphic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = GUI_TwinklePic &rArr; OSTaskCreate &rArr; OS_TCBInit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d00190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1159798]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_IsWin
+<LI><a href="#[1162110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Init
+</UL>
+
+<P><STRONG><a name="[1162230]"></a>GUI_DisplayPicture</STRONG> (ARM, 152 bytes, Stack size 48 bytes, graphic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = GUI_DisplayPicture &rArr; LCD12864Driver_DisplayByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1161e40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD12864Driver_DisplayByte
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1159798]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_IsWin
+<LI><a href="#[11597e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_KeyPress
+<LI><a href="#[1159870]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_IsTopThree
+<LI><a href="#[1162110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Init
+</UL>
+
+<P><STRONG><a name="[11621e8]"></a>GUI_DisplayLevel</STRONG> (ARM, 128 bytes, Stack size 8 bytes, graphic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = GUI_DisplayLevel &rArr; LCD1602Driver_DisplayString &rArr; LCD1602Driver_Set_xy &rArr; LCD1602Driver_WriteCMD
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1161db0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD1602Driver_DisplayString
+<LI><a href="#[11699b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1156578]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_InitialInfo
+<LI><a href="#[1156698]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_Eaten
+<LI><a href="#[1162110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Init
+</UL>
+
+<P><STRONG><a name="[11621a0]"></a>GUI_DisplayScore</STRONG> (ARM, 128 bytes, Stack size 8 bytes, graphic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 36 + Unknown Stack Size
+<LI>Call Chain = GUI_DisplayScore &rArr; LCD1602Driver_DisplayString &rArr; LCD1602Driver_Set_xy &rArr; LCD1602Driver_WriteCMD
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1161db0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD1602Driver_DisplayString
+<LI><a href="#[1169920]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1156578]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_InitialInfo
+<LI><a href="#[1156698]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_Eaten
+<LI><a href="#[1162110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Init
+</UL>
+
+<P><STRONG><a name="[1162158]"></a>GUI_DisplayTime</STRONG> (ARM, 352 bytes, Stack size 16 bytes, graphic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 44 + Unknown Stack Size
+<LI>Call Chain = GUI_DisplayTime &rArr; LCD1602Driver_DisplayString &rArr; LCD1602Driver_Set_xy &rArr; LCD1602Driver_WriteCMD
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1161db0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD1602Driver_DisplayString
+<LI><a href="#[1169920]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1156578]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_InitialInfo
+<LI><a href="#[1156848]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_DisplayTime
+<LI><a href="#[1162110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Init
+</UL>
+
+<P><STRONG><a name="[1162110]"></a>GUI_Init</STRONG> (ARM, 116 bytes, Stack size 8 bytes, graphic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96 + Unknown Stack Size
+<LI>Call Chain = GUI_Init &rArr; GUI_TwinklePic &rArr; OSTaskCreate &rArr; OS_TCBInit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1161d68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD1602Driver_Init
+<LI><a href="#[1161db0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD1602Driver_DisplayString
+<LI><a href="#[1161df8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD12864Driver_Init
+<LI><a href="#[1162158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayTime
+<LI><a href="#[11621a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayScore
+<LI><a href="#[11621e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayLevel
+<LI><a href="#[1162230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayPicture
+<LI><a href="#[1162278]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_TwinklePic
+</UL>
+<BR>[Called By]<UL><LI><a href="#[115f190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_Initial
+</UL>
+
+<P><STRONG><a name="[11620c8]"></a>GUI_DrawNode</STRONG> (ARM, 636 bytes, Stack size 48 bytes, graphic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = GUI_DrawNode &rArr; LCD12864Driver_DisplayByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1161e40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD12864Driver_DisplayByte
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1156530]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_ResumeSnake
+<LI><a href="#[1156608]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_Move
+<LI><a href="#[11566e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_CreateBean
+<LI><a href="#[1162080]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawSnake
+</UL>
+
+<P><STRONG><a name="[1162080]"></a>GUI_DrawSnake</STRONG> (ARM, 216 bytes, Stack size 16 bytes, graphic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = GUI_DrawSnake &rArr; GUI_DrawNode &rArr; LCD12864Driver_DisplayByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[11620c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawNode
+<LI><a href="#[11699b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11564a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_KeyPress
+<LI><a href="#[1156530]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_ResumeSnake
+<LI><a href="#[11565c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_InitialSnake
+</UL>
+
+<P><STRONG><a name="[1162038]"></a>GUI_DisplayMiniMap</STRONG> (ARM, 76 bytes, Stack size 16 bytes, graphic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = GUI_DisplayMiniMap &rArr; GUI_Mix &rArr; LCD12864Driver_DisplayByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1162308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Mix
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11597e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_KeyPress
+<LI><a href="#[1159828]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_ChangeMap
+</UL>
+
+<P><STRONG><a name="[1161ff0]"></a>GUI_DisplayMap</STRONG> (ARM, 48 bytes, Stack size 16 bytes, graphic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = GUI_DisplayMap &rArr; GUI_Mix &rArr; LCD12864Driver_DisplayByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1162308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Mix
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11564a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_KeyPress
+<LI><a href="#[11565c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_InitialSnake
+</UL>
+
+<P><STRONG><a name="[1161fa8]"></a>GUI_DisplayHeroName</STRONG> (ARM, 172 bytes, Stack size 40 bytes, graphic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = GUI_DisplayHeroName &rArr; GUI_Mix &rArr; LCD12864Driver_DisplayByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1162308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Mix
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11598b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_InputName
+</UL>
+
+<P><STRONG><a name="[1161f60]"></a>GUI_DisplayHero</STRONG> (ARM, 324 bytes, Stack size 48 bytes, graphic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = GUI_DisplayHero &rArr; GUI_Mix &rArr; LCD12864Driver_DisplayByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1162308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Mix
+<LI><a href="#[11699b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1159870]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_IsTopThree
+<LI><a href="#[1159900]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_UpdateHeroboard
+</UL>
+
+<P><STRONG><a name="[1161f18]"></a>GUI_DisplayPause</STRONG> (ARM, 40 bytes, Stack size 8 bytes, graphic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = GUI_DisplayPause &rArr; GUI_Mix &rArr; LCD12864Driver_DisplayByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1162308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Mix
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11564a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_KeyPress
+</UL>
+
+<P><STRONG><a name="[1161ed0]"></a>GUI_DelTwinkTask</STRONG> (ARM, 60 bytes, Stack size 16 bytes, graphic.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[d00148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+<LI><a href="#[1162308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Mix
+</UL>
+
+<P><STRONG><a name="[1161e88]"></a>GUI_KeyPress</STRONG> (ARM, 52 bytes, Stack size 8 bytes, graphic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = GUI_KeyPress &rArr; OSTaskCreate &rArr; OS_TCBInit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d00190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1153aa8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_ProcessKey
+</UL>
+
+<P><STRONG><a name="[115f268]"></a>startTimer</STRONG> (ARM, 40 bytes, Stack size 8 bytes, main.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[d00148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+</UL>
+
+<P><STRONG><a name="[115f220]"></a>init</STRONG> (ARM, 36 bytes, Stack size 8 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 136 + Unknown Stack Size
+<LI>Call Chain = init &rArr; OSInit &rArr; OS_InitTaskIdle &rArr; OSTaskCreateExt &rArr; OS_TCBInit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[cfc650]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TargetInit
+<LI><a href="#[d013e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+<LI><a href="#[d02cf8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeGet
+<LI><a href="#[115f190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_Initial
+<LI><a href="#[116a3b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;srand (via Veneer)
+</UL>
+<BR>[Called By]<UL><LI><a href="#[115f1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[115f1d8]"></a>main</STRONG> (ARM, 64 bytes, Stack size 8 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 144 + Unknown Stack Size
+<LI>Call Chain = main &rArr; init &rArr; OSInit &rArr; OS_InitTaskIdle &rArr; OSTaskCreateExt &rArr; OS_TCBInit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d00190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
+<LI><a href="#[d01278]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStart
+<LI><a href="#[115f220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> kernel.o(.text)
+</UL>
+<P><STRONG><a name="[115f190]"></a>Environment_Initial</STRONG> (ARM, 112 bytes, Stack size 8 bytes, environment.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 104 + Unknown Stack Size
+<LI>Call Chain = Environment_Initial &rArr; GUI_Init &rArr; GUI_TwinklePic &rArr; OSTaskCreate &rArr; OS_TCBInit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[11596c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_Init
+<LI><a href="#[1162110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11597e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_KeyPress
+<LI><a href="#[115f220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init
+</UL>
+
+<P><STRONG><a name="[1159900]"></a>Environment_UpdateHeroboard</STRONG> (ARM, 272 bytes, Stack size 16 bytes, environment.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = Environment_UpdateHeroboard &rArr; GUI_DisplayHero &rArr; GUI_Mix &rArr; LCD12864Driver_DisplayByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1161f60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayHero
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11597e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_KeyPress
+</UL>
+
+<P><STRONG><a name="[11598b8]"></a>Environment_InputName</STRONG> (ARM, 408 bytes, Stack size 8 bytes, environment.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = Environment_InputName &rArr; GUI_DisplayHeroName &rArr; GUI_Mix &rArr; LCD12864Driver_DisplayByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1161fa8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayHeroName
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11597e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_KeyPress
+</UL>
+
+<P><STRONG><a name="[1159870]"></a>Environment_IsTopThree</STRONG> (ARM, 72 bytes, Stack size 8 bytes, environment.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = Environment_IsTopThree &rArr; GUI_DisplayHero &rArr; GUI_Mix &rArr; LCD12864Driver_DisplayByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1161f60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayHero
+<LI><a href="#[1162230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayPicture
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11597e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_KeyPress
+</UL>
+
+<P><STRONG><a name="[1159828]"></a>Environment_ChangeMap</STRONG> (ARM, 148 bytes, Stack size 8 bytes, environment.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = Environment_ChangeMap &rArr; GUI_DisplayMiniMap &rArr; GUI_Mix &rArr; LCD12864Driver_DisplayByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1162038]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayMiniMap
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11597e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_KeyPress
+</UL>
+
+<P><STRONG><a name="[11597e0]"></a>Environment_KeyPress</STRONG> (ARM, 312 bytes, Stack size 8 bytes, environment.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 128 + Unknown Stack Size
+<LI>Call Chain = Environment_KeyPress &rArr; Environment_UpdateHeroboard &rArr; GUI_DisplayHero &rArr; GUI_Mix &rArr; LCD12864Driver_DisplayByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1159708]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_InitialGame
+<LI><a href="#[1159828]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_ChangeMap
+<LI><a href="#[1159870]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_IsTopThree
+<LI><a href="#[11598b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_InputName
+<LI><a href="#[1159900]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_UpdateHeroboard
+<LI><a href="#[115f190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_Initial
+<LI><a href="#[1162038]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayMiniMap
+<LI><a href="#[1162230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayPicture
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1153aa8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_ProcessKey
+</UL>
+
+<P><STRONG><a name="[1159798]"></a>Environment_IsWin</STRONG> (ARM, 84 bytes, Stack size 8 bytes, environment.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1162230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayPicture
+<LI><a href="#[1162278]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_TwinklePic
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1159750]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_PassScore
+</UL>
+
+<P><STRONG><a name="[1159750]"></a>Environment_PassScore</STRONG> (ARM, 72 bytes, Stack size 8 bytes, environment.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1159798]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_IsWin
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1156800]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_GameEndTask
+</UL>
+
+<P><STRONG><a name="[1156848]"></a>GameControl_DisplayTime</STRONG> (ARM, 68 bytes, Stack size 8 bytes, game_control.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[d02d88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDlyHMSM
+<LI><a href="#[1162158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayTime
+</UL>
+
+<P><STRONG><a name="[1156800]"></a>GameControl_GameEndTask</STRONG> (ARM, 52 bytes, Stack size 8 bytes, game_control.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[d00148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+<LI><a href="#[1159750]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_PassScore
+</UL>
+
+<P><STRONG><a name="[11567b8]"></a>GameControl_GameEnd</STRONG> (ARM, 32 bytes, Stack size 8 bytes, game_control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = GameControl_GameEnd &rArr; OSTaskCreate &rArr; OS_TCBInit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d00190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1156608]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_Move
+<LI><a href="#[1156698]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_Eaten
+</UL>
+
+<P><STRONG><a name="[1156770]"></a>GameControl_SetBit</STRONG> (ARM, 176 bytes, Stack size 12 bytes, game_control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = GameControl_SetBit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1156608]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_Move
+</UL>
+
+<P><STRONG><a name="[1156728]"></a>GameControl_GetBit</STRONG> (ARM, 72 bytes, Stack size 4 bytes, game_control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = GameControl_GetBit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1156608]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_Move
+<LI><a href="#[11566e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_CreateBean
+</UL>
+
+<P><STRONG><a name="[11566e0]"></a>GameControl_CreateBean</STRONG> (ARM, 232 bytes, Stack size 8 bytes, game_control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72 + Unknown Stack Size
+<LI>Call Chain = GameControl_CreateBean &rArr; GUI_DrawNode &rArr; LCD12864Driver_DisplayByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d02d88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDlyHMSM
+<LI><a href="#[1156728]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_GetBit
+<LI><a href="#[11620c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawNode
+<LI><a href="#[11699b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<LI><a href="#[116a328]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rand (via Veneer)
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11565c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_InitialSnake
+<LI><a href="#[1156698]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_Eaten
+</UL>
+
+<P><STRONG><a name="[1156698]"></a>GameControl_Eaten</STRONG> (ARM, 120 bytes, Stack size 16 bytes, game_control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 104 + Unknown Stack Size
+<LI>Call Chain = GameControl_Eaten &rArr; GameControl_GameEnd &rArr; OSTaskCreate &rArr; OS_TCBInit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[11566e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_CreateBean
+<LI><a href="#[11567b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_GameEnd
+<LI><a href="#[11621a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayScore
+<LI><a href="#[11621e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayLevel
+<LI><a href="#[11699b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1156608]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_Move
+</UL>
+
+<P><STRONG><a name="[1156650]"></a>GameControl_ChangeDirection</STRONG> (ARM, 180 bytes, Stack size 0 bytes, game_control.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1156608]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_Move
+</UL>
+
+<P><STRONG><a name="[1156608]"></a>GameControl_Move</STRONG> (ARM, 992 bytes, Stack size 8 bytes, game_control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 112 + Unknown Stack Size
+<LI>Call Chain = GameControl_Move &rArr; GameControl_Eaten &rArr; GameControl_GameEnd &rArr; OSTaskCreate &rArr; OS_TCBInit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d02d88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDlyHMSM
+<LI><a href="#[1156650]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_ChangeDirection
+<LI><a href="#[1156698]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_Eaten
+<LI><a href="#[1156728]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_GetBit
+<LI><a href="#[1156770]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_SetBit
+<LI><a href="#[11567b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_GameEnd
+<LI><a href="#[11620c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawNode
+<LI><a href="#[11699b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> game_control.o(.text)
+</UL>
+<P><STRONG><a name="[11565c0]"></a>GameControl_InitialSnake</STRONG> (ARM, 228 bytes, Stack size 8 bytes, game_control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88 + Unknown Stack Size
+<LI>Call Chain = GameControl_InitialSnake &rArr; OSTaskCreate &rArr; OS_TCBInit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d00190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
+<LI><a href="#[11566e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_CreateBean
+<LI><a href="#[1161ff0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayMap
+<LI><a href="#[1162080]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawSnake
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1159708]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_InitialGame
+</UL>
+
+<P><STRONG><a name="[1156578]"></a>GameControl_InitialInfo</STRONG> (ARM, 160 bytes, Stack size 16 bytes, game_control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 60 + Unknown Stack Size
+<LI>Call Chain = GameControl_InitialInfo &rArr; GUI_DisplayTime &rArr; LCD1602Driver_DisplayString &rArr; LCD1602Driver_Set_xy &rArr; LCD1602Driver_WriteCMD
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1162158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayTime
+<LI><a href="#[11621a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayScore
+<LI><a href="#[11621e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayLevel
+<LI><a href="#[11699b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1159708]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_InitialGame
+</UL>
+
+<P><STRONG><a name="[1159708]"></a>GameControl_InitialGame</STRONG> (ARM, 32 bytes, Stack size 8 bytes, game_control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96 + Unknown Stack Size
+<LI>Call Chain = GameControl_InitialGame &rArr; GameControl_InitialSnake &rArr; OSTaskCreate &rArr; OS_TCBInit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1156578]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_InitialInfo
+<LI><a href="#[11565c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_InitialSnake
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11597e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_KeyPress
+</UL>
+
+<P><STRONG><a name="[1156530]"></a>GameControl_ResumeSnake</STRONG> (ARM, 72 bytes, Stack size 8 bytes, game_control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = GameControl_ResumeSnake &rArr; GUI_DrawSnake &rArr; GUI_DrawNode &rArr; LCD12864Driver_DisplayByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d000b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskResume
+<LI><a href="#[1162080]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawSnake
+<LI><a href="#[11620c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawNode
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11564a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_KeyPress
+</UL>
+
+<P><STRONG><a name="[11564e8]"></a>GameControl_SuspendSnake</STRONG> (ARM, 28 bytes, Stack size 8 bytes, game_control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = GameControl_SuspendSnake &rArr; OSTaskSuspend &rArr; OS_Sched
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d00028]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSuspend
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11564a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_KeyPress
+</UL>
+
+<P><STRONG><a name="[11564a0]"></a>GameControl_KeyPress</STRONG> (ARM, 152 bytes, Stack size 8 bytes, game_control.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = GameControl_KeyPress &rArr; GameControl_ResumeSnake &rArr; GUI_DrawSnake &rArr; GUI_DrawNode &rArr; LCD12864Driver_DisplayByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[11564e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_SuspendSnake
+<LI><a href="#[1156530]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_ResumeSnake
+<LI><a href="#[1161f18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayPause
+<LI><a href="#[1161ff0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayMap
+<LI><a href="#[1162080]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawSnake
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1153aa8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_ProcessKey
+</UL>
+
+<P><STRONG><a name="[11596c0]"></a>Key_Init</STRONG> (ARM, 104 bytes, Stack size 0 bytes, key_press.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[115f190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_Initial
+</UL>
+
+<P><STRONG><a name="[1153af0]"></a>Key_GetKey</STRONG> (ARM, 224 bytes, Stack size 0 bytes, key_press.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[115f148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_Main
+</UL>
+
+<P><STRONG><a name="[1153aa8]"></a>Key_ProcessKey</STRONG> (ARM, 48 bytes, Stack size 8 bytes, key_press.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 136 + Unknown Stack Size
+<LI>Call Chain = Key_ProcessKey &rArr; Environment_KeyPress &rArr; Environment_UpdateHeroboard &rArr; GUI_DisplayHero &rArr; GUI_Mix &rArr; LCD12864Driver_DisplayByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[11564a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_KeyPress
+<LI><a href="#[11597e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Environment_KeyPress
+<LI><a href="#[1161e88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_KeyPress
+</UL>
+<BR>[Called By]<UL><LI><a href="#[115f148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_Main
+</UL>
+
+<P><STRONG><a name="[115f148]"></a>Key_Main</STRONG> (ARM, 252 bytes, Stack size 16 bytes, key_press.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
+<LI>Call Chain = Key_Main &rArr; Key_ProcessKey &rArr; Environment_KeyPress &rArr; Environment_UpdateHeroboard &rArr; GUI_DisplayHero &rArr; GUI_Mix &rArr; LCD12864Driver_DisplayByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d02d88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDlyHMSM
+<LI><a href="#[1153aa8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_ProcessKey
+<LI><a href="#[1153af0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_GetKey
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> main.o(.text)
+</UL>
+<P><STRONG><a name="[11712b0]"></a>LCD1602Driver_CheckBusy</STRONG> (ARM, 144 bytes, Stack size 0 bytes, lcd1602.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1171220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD1602Driver_WriteData
+<LI><a href="#[1171268]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD1602Driver_WriteCMD
+</UL>
+
+<P><STRONG><a name="[1171268]"></a>LCD1602Driver_WriteCMD</STRONG> (ARM, 68 bytes, Stack size 4 bytes, lcd1602.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = LCD1602Driver_WriteCMD
+</UL>
+<BR>[Calls]<UL><LI><a href="#[11712b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD1602Driver_CheckBusy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1161d68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD1602Driver_Init
+<LI><a href="#[11711d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD1602Driver_Set_xy
+</UL>
+
+<P><STRONG><a name="[1171220]"></a>LCD1602Driver_WriteData</STRONG> (ARM, 68 bytes, Stack size 4 bytes, lcd1602.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = LCD1602Driver_WriteData
+</UL>
+<BR>[Calls]<UL><LI><a href="#[11712b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD1602Driver_CheckBusy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1161db0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD1602Driver_DisplayString
+<LI><a href="#[1171190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD1602Driver_DisplayChar
+</UL>
+
+<P><STRONG><a name="[1161d68]"></a>LCD1602Driver_Init</STRONG> (ARM, 108 bytes, Stack size 4 bytes, lcd1602.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LCD1602Driver_Init &rArr; LCD1602Driver_WriteCMD
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1171268]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD1602Driver_WriteCMD
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1162110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Init
+</UL>
+
+<P><STRONG><a name="[11711d8]"></a>LCD1602Driver_Set_xy</STRONG> (ARM, 84 bytes, Stack size 8 bytes, lcd1602.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = LCD1602Driver_Set_xy &rArr; LCD1602Driver_WriteCMD
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1171268]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD1602Driver_WriteCMD
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1161db0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD1602Driver_DisplayString
+<LI><a href="#[1171190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD1602Driver_DisplayChar
+</UL>
+
+<P><STRONG><a name="[1171190]"></a>LCD1602Driver_DisplayChar</STRONG> (ARM, 44 bytes, Stack size 16 bytes, lcd1602.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[11711d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD1602Driver_Set_xy
+<LI><a href="#[1171220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD1602Driver_WriteData
+</UL>
+
+<P><STRONG><a name="[1161db0]"></a>LCD1602Driver_DisplayString</STRONG> (ARM, 64 bytes, Stack size 16 bytes, lcd1602.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = LCD1602Driver_DisplayString &rArr; LCD1602Driver_Set_xy &rArr; LCD1602Driver_WriteCMD
+</UL>
+<BR>[Calls]<UL><LI><a href="#[11711d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD1602Driver_Set_xy
+<LI><a href="#[1171220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD1602Driver_WriteData
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1162110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Init
+<LI><a href="#[1162158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayTime
+<LI><a href="#[11621a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayScore
+<LI><a href="#[11621e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayLevel
+</UL>
+
+<P><STRONG><a name="[116e800]"></a>LCD12864Driver_WriteCMD</STRONG> (ARM, 52 bytes, Stack size 0 bytes, lcd12864.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1161df8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD12864Driver_Init
+<LI><a href="#[1161e40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD12864Driver_DisplayByte
+<LI><a href="#[116e770]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD12864Driver_CleanAll
+</UL>
+
+<P><STRONG><a name="[116e7b8]"></a>LCD12864Driver_WriteData</STRONG> (ARM, 52 bytes, Stack size 0 bytes, lcd12864.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1161e40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD12864Driver_DisplayByte
+<LI><a href="#[116e770]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD12864Driver_CleanAll
+</UL>
+
+<P><STRONG><a name="[116e770]"></a>LCD12864Driver_CleanAll</STRONG> (ARM, 108 bytes, Stack size 8 bytes, lcd12864.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LCD12864Driver_CleanAll
+</UL>
+<BR>[Calls]<UL><LI><a href="#[116e7b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD12864Driver_WriteData
+<LI><a href="#[116e800]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD12864Driver_WriteCMD
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1161df8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD12864Driver_Init
+</UL>
+
+<P><STRONG><a name="[1161df8]"></a>LCD12864Driver_Init</STRONG> (ARM, 120 bytes, Stack size 4 bytes, lcd12864.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = LCD12864Driver_Init &rArr; LCD12864Driver_CleanAll
+</UL>
+<BR>[Calls]<UL><LI><a href="#[116e770]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD12864Driver_CleanAll
+<LI><a href="#[116e800]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD12864Driver_WriteCMD
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1162110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Init
+</UL>
+
+<P><STRONG><a name="[1161e40]"></a>LCD12864Driver_DisplayByte</STRONG> (ARM, 136 bytes, Stack size 16 bytes, lcd12864.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = LCD12864Driver_DisplayByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[116e7b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD12864Driver_WriteData
+<LI><a href="#[116e800]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD12864Driver_WriteCMD
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11620c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawNode
+<LI><a href="#[1162230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayPicture
+<LI><a href="#[1162308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Mix
+<LI><a href="#[116e698]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD12864Driver_DisPicture
+<LI><a href="#[116e728]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD12864Driver_DispOneChinese
+</UL>
+
+<P><STRONG><a name="[116e728]"></a>LCD12864Driver_DispOneChinese</STRONG> (ARM, 124 bytes, Stack size 20 bytes, lcd12864.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1161e40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD12864Driver_DisplayByte
+</UL>
+<BR>[Called By]<UL><LI><a href="#[116e6e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD12864Driver_DispChinese
+</UL>
+
+<P><STRONG><a name="[116e6e0]"></a>LCD12864Driver_DispChinese</STRONG> (ARM, 80 bytes, Stack size 24 bytes, lcd12864.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[116e728]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD12864Driver_DispOneChinese
+</UL>
+
+<P><STRONG><a name="[116e698]"></a>LCD12864Driver_DisPicture</STRONG> (ARM, 116 bytes, Stack size 32 bytes, lcd12864.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1161e40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD12864Driver_DisplayByte
+</UL>
+
+<P><STRONG><a name="[cfff50]"></a>OSTaskStkInit</STRONG> (ARM, 232 bytes, Stack size 8 bytes, os_cpu_c.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OSTaskStkInit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d00190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
+<LI><a href="#[d00ed0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreateExt
+</UL>
+
+<P><STRONG><a name="[116e328]"></a>SWI_Exception</STRONG> (ARM, 336 bytes, Stack size 4 bytes, os_cpu_c.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = SWI_Exception
+</UL>
+<BR>[Called By]<UL><LI><a href="#[cff730]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SoftwareInterrupt
+</UL>
+
+<P><STRONG><a name="[d00f60]"></a>OSStartHighRdy</STRONG> (ARM, 16 bytes, Stack size 8 bytes, os_cpu_c.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OSStartHighRdy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d01278]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStart
+</UL>
+
+<P><STRONG><a name="[d00ff0]"></a>OSInitHookBegin</STRONG> (ARM, 4 bytes, Stack size 0 bytes, os_cpu_c.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[d013e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+</UL>
+
+<P><STRONG><a name="[d00fa8]"></a>OSInitHookEnd</STRONG> (ARM, 4 bytes, Stack size 0 bytes, os_cpu_c.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[d013e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+</UL>
+
+<P><STRONG><a name="[d00e88]"></a>OSTaskCreateHook</STRONG> (ARM, 8 bytes, Stack size 0 bytes, os_cpu_c.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[d01038]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TCBInit
+</UL>
+
+<P><STRONG><a name="[cfff98]"></a>OSTaskDelHook</STRONG> (ARM, 8 bytes, Stack size 0 bytes, os_cpu_c.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[d00148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+</UL>
+
+<P><STRONG><a name="[116e370]"></a>OSTaskSwHook</STRONG> (ARM, 4 bytes, Stack size 0 bytes, os_cpu_c.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[cff7c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntCtxSw
+<LI><a href="#[116e3b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__OSStartHighRdy
+</UL>
+
+<P><STRONG><a name="[116b8c0]"></a>OSTaskStatHook</STRONG> (ARM, 4 bytes, Stack size 0 bytes, os_cpu_c.o(.text), UNUSED)
+
+<P><STRONG><a name="[d00f18]"></a>OSTCBInitHook</STRONG> (ARM, 8 bytes, Stack size 0 bytes, os_cpu_c.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[d01038]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TCBInit
+</UL>
+
+<P><STRONG><a name="[d00df8]"></a>OSTimeTickHook</STRONG> (ARM, 4 bytes, Stack size 0 bytes, os_cpu_c.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[d01230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeTick
+</UL>
+
+<P><STRONG><a name="[d00e40]"></a>OSTaskIdleHook</STRONG> (ARM, 4 bytes, Stack size 0 bytes, os_cpu_c.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[d01428]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskIdle
+</UL>
+
+<P><STRONG><a name="[116a3b8]"></a>srand</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, rand.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = srand
+</UL>
+<BR>[Called By]<UL><LI><a href="#[115f220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init (via Veneer)
+<LI><a href="#[116a370]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_rand_init
+</UL>
+
+<P><STRONG><a name="[116a370]"></a>_rand_init</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rand.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = _rand_init &rArr; srand
+</UL>
+<BR>[Calls]<UL><LI><a href="#[116a3b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;srand
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11677a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init
+</UL>
+
+<P><STRONG><a name="[116a328]"></a>rand</STRONG> (Thumb, 56 bytes, Stack size 12 bytes, rand.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = rand
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11566e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_CreateBean (via Veneer)
+</UL>
+
+<P><STRONG><a name="[116a0d0]"></a>__aeabi_memcpy4</STRONG> (ARM, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[cfffe0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQuery
+</UL>
+
+<P><STRONG><a name="[116a088]"></a>__aeabi_memcpy8</STRONG> (ARM, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
+
+<P><STRONG><a name="[116a040]"></a>__rt_memcpy_w</STRONG> (ARM, 100 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
+
+<P><STRONG><a name="[1169ff8]"></a>_memcpy_lastbytes_aligned</STRONG> (ARM, 0 bytes, Stack size unknown bytes, rt_memcpy_w.o(.text), UNUSED)
+
+<P><STRONG><a name="[1169e10]"></a>__aeabi_memclr4</STRONG> (ARM, 0 bytes, Stack size 4 bytes, rt_memclr_w.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = __aeabi_memclr4
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d00ed0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreateExt
+</UL>
+
+<P><STRONG><a name="[1169dc8]"></a>__aeabi_memclr8</STRONG> (ARM, 0 bytes, Stack size 4 bytes, rt_memclr_w.o(.text), UNUSED)
+
+<P><STRONG><a name="[1169d80]"></a>__rt_memclr_w</STRONG> (ARM, 84 bytes, Stack size 4 bytes, rt_memclr_w.o(.text), UNUSED)
+
+<P><STRONG><a name="[1169d38]"></a>_memset_w</STRONG> (ARM, 0 bytes, Stack size unknown bytes, rt_memclr_w.o(.text), UNUSED)
+
+<P><STRONG><a name="[11699f8]"></a>__aeabi_idiv</STRONG> (ARM, 0 bytes, Stack size 8 bytes, aeabi_sdiv.o(.text), UNUSED)
+
+<P><STRONG><a name="[11699b0]"></a>__aeabi_idivmod</STRONG> (ARM, 384 bytes, Stack size 8 bytes, aeabi_sdiv.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_idivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1156578]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_InitialInfo
+<LI><a href="#[1156608]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_Move
+<LI><a href="#[1156698]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_Eaten
+<LI><a href="#[11566e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GameControl_CreateBean
+<LI><a href="#[1161f60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayHero
+<LI><a href="#[1162080]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawSnake
+<LI><a href="#[11621e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayLevel
+</UL>
+
+<P><STRONG><a name="[11689f8]"></a>__rt_entry</STRONG> (ARM, 76 bytes, Stack size 16 bytes, kernel.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64 + Unknown Stack Size
+<LI>Call Chain = __rt_entry &rArr; __rt_lib_init &rArr; _fp_init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1166c20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_platform_post_lib_init
+<LI><a href="#[1166d90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_platform_post_stackheap_init
+<LI><a href="#[11677a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init (via Veneer)
+<LI><a href="#[1167d48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_stackheap_init
+<LI><a href="#[1167ef8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit (via BX)
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1162ce0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_rt2
+<LI><a href="#[1168cb8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
+</UL>
+
+<P><STRONG><a name="[11689b0]"></a>__rt_exit</STRONG> (ARM, 20 bytes, Stack size 8 bytes, kernel.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __rt_exit &rArr; __rt_lib_shutdown
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1167760]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_shutdown (via Veneer)
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1167ef8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit (via Veneer)
+</UL>
+
+<P><STRONG><a name="[1168968]"></a>__rt_abort</STRONG> (ARM, 8 bytes, Stack size 0 bytes, kernel.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[11680b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_exit
+</UL>
+
+<P><STRONG><a name="[11680b0]"></a>_sys_exit</STRONG> (ARM, 20 bytes, Stack size 0 bytes, sys_exit.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[1168968]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_abort
+</UL>
+
+<P><STRONG><a name="[1167ef8]"></a>exit</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, exit.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = exit &rArr; __rt_exit &rArr; __rt_lib_shutdown
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1167e68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_call_atexit_fns (Weak Reference)
+<LI><a href="#[11689b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit (via Veneer)
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11689f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
+</UL>
+
+<P><STRONG><a name="[1167d48]"></a>__rt_stackheap_init</STRONG> (ARM, 40 bytes, Stack size 8 bytes, stkheap1.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16 + Unknown Stack Size
+<LI>Call Chain = __rt_stackheap_init &rArr; __user_setup_stackheap
+</UL>
+<BR>[Calls]<UL><LI><a href="#[11662c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_stackheap_storage
+<LI><a href="#[1166730]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11689f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
+</UL>
+
+<P><STRONG><a name="[1167d00]"></a>__rt_heap_extend</STRONG> (ARM, 112 bytes, Stack size 16 bytes, stkheap1.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[11662c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_stackheap_storage
+<LI><a href="#[1167c28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_heap_extend (Weak Reference)
+</UL>
+
+<P><STRONG><a name="[11677a8]"></a>__rt_lib_init</STRONG> (Thumb, 184 bytes, Stack size 40 bytes, lib_init.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = __rt_lib_init &rArr; _fp_init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1165738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_init (via Veneer)
+<LI><a href="#[1165f08]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_locale (via Veneer)
+<LI><a href="#[1167178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_signal_init (Weak Reference)
+<LI><a href="#[1167208]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_initio (Weak Reference)
+<LI><a href="#[1167250]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_init_user_alloc (Weak Reference)
+<LI><a href="#[1167298]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_init_alloc (Weak Reference)
+<LI><a href="#[11672e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_getenv_init (Weak Reference)
+<LI><a href="#[1167328]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_get_lc_time (Weak Reference)
+<LI><a href="#[1167370]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_get_lc_numeric (Weak Reference)
+<LI><a href="#[11673b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_get_lc_monetary (Weak Reference)
+<LI><a href="#[1167400]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_get_lc_ctype (Weak Reference)
+<LI><a href="#[1167448]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_get_lc_collate (Weak Reference)
+<LI><a href="#[1167490]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_trap_init (Weak Reference)
+<LI><a href="#[11674d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_clock_init (Weak Reference)
+<LI><a href="#[1167520]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_atexit_init (Weak Reference)
+<LI><a href="#[11675b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cpp_initialize__aeabi_ (Weak Reference)
+<LI><a href="#[11675f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__alloca_initialize (Weak Reference)
+<LI><a href="#[1167640]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__Heap_DescSize (Weak Reference)
+<LI><a href="#[1167688]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_exceptions_init (Weak Reference)
+<LI><a href="#[1167838]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_argv_veneer (via Veneer)
+<LI><a href="#[116a370]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_rand_init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11689f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry (via Veneer)
+</UL>
+
+<P><STRONG><a name="[1167760]"></a>__rt_lib_shutdown</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, lib_init.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __rt_lib_shutdown
+</UL>
+<BR>[Calls]<UL><LI><a href="#[11670e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_terminateio (Weak Reference)
+<LI><a href="#[1167130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_terminate_user_alloc (Weak Reference)
+<LI><a href="#[1167568]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_finalize (Weak Reference)
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11689b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit (via Veneer)
+</UL>
+
+<P><STRONG><a name="[1166d90]"></a>_platform_post_stackheap_init</STRONG> (ARM, 12 bytes, Stack size 0 bytes, boardinit2.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[11689f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
+</UL>
+
+<P><STRONG><a name="[1166c20]"></a>_platform_post_lib_init</STRONG> (ARM, 16 bytes, Stack size 8 bytes, boardinit3.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = _platform_post_lib_init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11689f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
+</UL>
+
+<P><STRONG><a name="[11668e8]"></a>__I_use_semihosting</STRONG> (ARM, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> sys_exit.o(.text)
+</UL>
+<P><STRONG><a name="[11668a0]"></a>__use_no_semihosting_swi</STRONG> (ARM, 4 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+
+<P><STRONG><a name="[1166730]"></a>__user_setup_stackheap</STRONG> (ARM, 96 bytes, Stack size 8 bytes, sys_stackheap_outer.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
+<LI>Call Chain = __user_setup_stackheap
+</UL>
+<BR>[Calls]<UL><LI><a href="#[cff380]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_initial_stackheap
+<LI><a href="#[1165298]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_perproc_libspace
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1167d48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_stackheap_init
+</UL>
+
+<P><STRONG><a name="[11662c0]"></a>__rt_stackheap_storage</STRONG> (ARM, 12 bytes, Stack size 0 bytes, rt_stackheap_storage_intlibspace.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1167d00]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_heap_extend
+<LI><a href="#[1167d48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_stackheap_init
+</UL>
+
+<P><STRONG><a name="[1165f08]"></a>__rt_locale</STRONG> (ARM, 12 bytes, Stack size 0 bytes, rt_locale_intlibspace.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[11677a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init (via Veneer)
+</UL>
+
+<P><STRONG><a name="[1165910]"></a>__ARM_get_argv</STRONG> (Thumb, 6 bytes, Stack size 4 bytes, no_argv.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = __ARM_get_argv
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> lib_init.o(.emb_text)
+</UL>
+<P><STRONG><a name="[11652e0]"></a>__user_libspace</STRONG> (ARM, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+
+<P><STRONG><a name="[1165298]"></a>__user_perproc_libspace</STRONG> (ARM, 0 bytes, Stack size 0 bytes, libspace.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1166730]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
+</UL>
+
+<P><STRONG><a name="[1165250]"></a>__user_perthread_libspace</STRONG> (ARM, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+
+<P><STRONG><a name="[1164ee0]"></a>__rt_fp_status_addr</STRONG> (ARM, 12 bytes, Stack size 0 bytes, rt_fp_status_addr_intlibspace.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1165738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_init
+</UL>
+
+<P><STRONG><a name="[1169968]"></a>__aeabi_uidiv</STRONG> (ARM, 0 bytes, Stack size 0 bytes, aeabi_sdiv.o(.text_udiv), UNUSED)
+
+<P><STRONG><a name="[1169920]"></a>__aeabi_uidivmod</STRONG> (ARM, 28 bytes, Stack size 0 bytes, aeabi_sdiv.o(.text_udiv))
+<BR><BR>[Calls]<UL><LI><a href="#[1169a40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__arm_div_large
+<LI><a href="#[1169a88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__arm_div4
+<LI><a href="#[1169ad0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__arm_div8
+</UL>
+<BR>[Called By]<UL><LI><a href="#[cfc608]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitialiseUART1
+<LI><a href="#[d02d88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDlyHMSM
+<LI><a href="#[1162158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayTime
+<LI><a href="#[11621a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DisplayScore
+</UL>
+
+<P><STRONG><a name="[cff778]"></a>Reset</STRONG> (ARM, 0 bytes, Stack size unknown bytes, init.o(Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64 + Unknown Stack Size
+<LI>Call Chain = Reset &rArr; __main &rArr; __rt_entry &rArr; __rt_lib_init &rArr; _fp_init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[cff2f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TargetResetInit
+<LI><a href="#[cff898]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitStack
+<LI><a href="#[1168cb8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> vectors.o(RESET)
+</UL>
+<P><STRONG><a name="[cff380]"></a>__user_initial_stackheap</STRONG> (ARM, 0 bytes, Stack size unknown bytes, init.o(Init))
+<BR><BR>[Called By]<UL><LI><a href="#[1166730]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
+</UL>
+
+<P><STRONG><a name="[cff338]"></a>__rt_div0</STRONG> (ARM, 0 bytes, Stack size unknown bytes, init.o(Init), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[cff338]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_div0
+</UL>
+<BR>[Called By]<UL><LI><a href="#[cff338]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_div0
+</UL>
+
+<P><STRONG><a name="[cff730]"></a>SoftwareInterrupt</STRONG> (ARM, 0 bytes, Stack size unknown bytes, os_cpu_a.o(subr))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4 + Unknown Stack Size
+<LI>Call Chain = SoftwareInterrupt &rArr; SWI_Exception
+</UL>
+<BR>[Calls]<UL><LI><a href="#[116e328]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SWI_Exception
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> vectors.o(RESET)
+</UL>
+<P><STRONG><a name="[cff7c0]"></a>OSIntCtxSw</STRONG> (ARM, 0 bytes, Stack size unknown bytes, os_cpu_a.o(subr))
+<BR><BR>[Calls]<UL><LI><a href="#[116e370]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSwHook
+</UL>
+<BR>[Address Reference Count : 2]<UL><LI> vectors.o(RESET)
+<LI> os_cpu_a.o(subr)
+</UL>
+<P><STRONG><a name="[116e3b8]"></a>__OSStartHighRdy</STRONG> (ARM, 0 bytes, Stack size unknown bytes, os_cpu_a.o(subr))
+<BR><BR>[Calls]<UL><LI><a href="#[116e370]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSwHook
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> os_cpu_a.o(subr)
+</UL>
+<P><STRONG><a name="[1165738]"></a>_fp_init</STRONG> (ARM, 24 bytes, Stack size 8 bytes, fpinit.o(x$fpl$fpinit))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = _fp_init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1164ee0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_fp_status_addr
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11677a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init (via Veneer)
+</UL>
+
+<P><STRONG><a name="[11656f0]"></a>__fplib_config_pureend_doubles</STRONG> (ARM, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
+<P>
+<H3>
+Local Symbols
+</H3>
+<P><STRONG><a name="[d01ff8]"></a>OS_InitTaskIdle</STRONG> (ARM, 68 bytes, Stack size 24 bytes, os_core.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = OS_InitTaskIdle &rArr; OSTaskCreateExt &rArr; OS_TCBInit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d00ed0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreateExt
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d013e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+</UL>
+
+<P><STRONG><a name="[d01fb0]"></a>OS_InitEventList</STRONG> (ARM, 80 bytes, Stack size 0 bytes, os_core.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[d013e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+</UL>
+
+<P><STRONG><a name="[d01f68]"></a>OS_InitTCBList</STRONG> (ARM, 116 bytes, Stack size 0 bytes, os_core.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[d013e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+</UL>
+
+<P><STRONG><a name="[d01f20]"></a>OS_InitRdyList</STRONG> (ARM, 88 bytes, Stack size 0 bytes, os_core.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[d013e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+</UL>
+
+<P><STRONG><a name="[d01ed8]"></a>OS_InitMisc</STRONG> (ARM, 64 bytes, Stack size 0 bytes, os_core.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[d013e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+</UL>
+
+<P><STRONG><a name="[cffad8]"></a>Undefined</STRONG> (ARM, 0 bytes, Stack size unknown bytes, vectors.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[cffad8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Undefined
+</UL>
+<BR>[Called By]<UL><LI><a href="#[cffad8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Undefined
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> vectors.o(RESET)
+</UL>
+<P><STRONG><a name="[cffa90]"></a>PrefetchAbort</STRONG> (ARM, 0 bytes, Stack size unknown bytes, vectors.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[cffa90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PrefetchAbort
+</UL>
+<BR>[Called By]<UL><LI><a href="#[cffa90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PrefetchAbort
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> vectors.o(RESET)
+</UL>
+<P><STRONG><a name="[cffa48]"></a>DataAbort</STRONG> (ARM, 0 bytes, Stack size unknown bytes, vectors.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[cffa48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DataAbort
+</UL>
+<BR>[Called By]<UL><LI><a href="#[cffa48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DataAbort
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> vectors.o(RESET)
+</UL>
+<P><STRONG><a name="[cffa00]"></a>FIQ_Handler</STRONG> (ARM, 0 bytes, Stack size unknown bytes, vectors.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[cff850]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIQ_Exception
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> vectors.o(RESET)
+</UL>
+<P><STRONG><a name="[1169ad0]"></a>__arm_div8</STRONG> (ARM, 0 bytes, Stack size unknown bytes, aeabi_sdiv.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1169920]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+</UL>
+
+<P><STRONG><a name="[1169a88]"></a>__arm_div4</STRONG> (ARM, 0 bytes, Stack size unknown bytes, aeabi_sdiv.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1169920]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+</UL>
+
+<P><STRONG><a name="[1169a40]"></a>__arm_div_large</STRONG> (ARM, 0 bytes, Stack size unknown bytes, aeabi_sdiv.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1169920]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+</UL>
+<P>
+<H3>
+Undefined Global Symbols
+</H3>
+<P><STRONG><a name="[1167688]"></a>__ARM_exceptions_init</STRONG> (Unknown, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<BR><BR>[Called By]<UL><LI><a href="#[11677a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init (Weak Reference)
+</UL>
+
+<P><STRONG><a name="[1167640]"></a>__Heap_DescSize</STRONG> (Unknown, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<BR><BR>[Called By]<UL><LI><a href="#[11677a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init (Weak Reference)
+</UL>
+
+<P><STRONG><a name="[11675f8]"></a>__alloca_initialize</STRONG> (Unknown, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<BR><BR>[Called By]<UL><LI><a href="#[11677a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init (Weak Reference)
+</UL>
+
+<P><STRONG><a name="[11675b0]"></a>__cpp_initialize__aeabi_</STRONG> (Unknown, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<BR><BR>[Called By]<UL><LI><a href="#[11677a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init (Weak Reference)
+</UL>
+
+<P><STRONG><a name="[1167568]"></a>__cxa_finalize</STRONG> (Unknown, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<BR><BR>[Called By]<UL><LI><a href="#[1167760]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_shutdown (Weak Reference)
+</UL>
+
+<P><STRONG><a name="[1167c28]"></a>__user_heap_extend</STRONG> (Unknown, 0 bytes, Stack size 0 bytes, UNDEFINED, UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[1167d00]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_heap_extend (Weak Reference)
+</UL>
+
+<P><STRONG><a name="[1167520]"></a>_atexit_init</STRONG> (Unknown, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<BR><BR>[Called By]<UL><LI><a href="#[11677a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init (Weak Reference)
+</UL>
+
+<P><STRONG><a name="[1167e68]"></a>_call_atexit_fns</STRONG> (Unknown, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<BR><BR>[Called By]<UL><LI><a href="#[1167ef8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit (Weak Reference)
+</UL>
+
+<P><STRONG><a name="[11674d8]"></a>_clock_init</STRONG> (Unknown, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<BR><BR>[Called By]<UL><LI><a href="#[11677a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init (Weak Reference)
+</UL>
+
+<P><STRONG><a name="[1167490]"></a>_fp_trap_init</STRONG> (Unknown, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<BR><BR>[Called By]<UL><LI><a href="#[11677a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init (Weak Reference)
+</UL>
+
+<P><STRONG><a name="[1167448]"></a>_get_lc_collate</STRONG> (Unknown, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<BR><BR>[Called By]<UL><LI><a href="#[11677a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init (Weak Reference)
+</UL>
+
+<P><STRONG><a name="[1167400]"></a>_get_lc_ctype</STRONG> (Unknown, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<BR><BR>[Called By]<UL><LI><a href="#[11677a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init (Weak Reference)
+</UL>
+
+<P><STRONG><a name="[11673b8]"></a>_get_lc_monetary</STRONG> (Unknown, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<BR><BR>[Called By]<UL><LI><a href="#[11677a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init (Weak Reference)
+</UL>
+
+<P><STRONG><a name="[1167370]"></a>_get_lc_numeric</STRONG> (Unknown, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<BR><BR>[Called By]<UL><LI><a href="#[11677a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init (Weak Reference)
+</UL>
+
+<P><STRONG><a name="[1167328]"></a>_get_lc_time</STRONG> (Unknown, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<BR><BR>[Called By]<UL><LI><a href="#[11677a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init (Weak Reference)
+</UL>
+
+<P><STRONG><a name="[11672e0]"></a>_getenv_init</STRONG> (Unknown, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<BR><BR>[Called By]<UL><LI><a href="#[11677a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init (Weak Reference)
+</UL>
+
+<P><STRONG><a name="[1167298]"></a>_init_alloc</STRONG> (Unknown, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<BR><BR>[Called By]<UL><LI><a href="#[11677a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init (Weak Reference)
+</UL>
+
+<P><STRONG><a name="[1167250]"></a>_init_user_alloc</STRONG> (Unknown, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<BR><BR>[Called By]<UL><LI><a href="#[11677a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init (Weak Reference)
+</UL>
+
+<P><STRONG><a name="[1167208]"></a>_initio</STRONG> (Unknown, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<BR><BR>[Called By]<UL><LI><a href="#[11677a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init (Weak Reference)
+</UL>
+
+<P><STRONG><a name="[1167178]"></a>_signal_init</STRONG> (Unknown, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<BR><BR>[Called By]<UL><LI><a href="#[11677a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init (Weak Reference)
+</UL>
+
+<P><STRONG><a name="[1167130]"></a>_terminate_user_alloc</STRONG> (Unknown, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<BR><BR>[Called By]<UL><LI><a href="#[1167760]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_shutdown (Weak Reference)
+</UL>
+
+<P><STRONG><a name="[11670e8]"></a>_terminateio</STRONG> (Unknown, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<BR><BR>[Called By]<UL><LI><a href="#[1167760]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_shutdown (Weak Reference)
+</UL>
+<HR></body></html>
